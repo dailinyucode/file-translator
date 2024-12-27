@@ -81,6 +81,7 @@ const activeIndex = ref('/')
 .logo-text {
   background: linear-gradient(45deg, #409EFF, #36cfc9);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   transition: all 0.3s ease;
