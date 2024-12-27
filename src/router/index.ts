@@ -29,6 +29,11 @@ const router = createRouter({
       path: '/document',
       name: 'document',
       component: DocumentTranslation
+    },
+    {
+      path: '/text',
+      name: 'text',
+      component: () => import('../views/TextTranslation.vue')
     }
   ]
 })

@@ -1,3 +1,7 @@
+<script setup>
+import { Document, ChatLineRound, Lock } from '@element-plus/icons-vue'
+</script>
+
 <template>
   <div class="home-container">
     <div class="welcome-section">
@@ -12,17 +16,23 @@
       <h2>我们的特点</h2>
       <div class="features-grid">
         <div class="feature-card">
-          <el-icon><Document /></el-icon>
+          <div class="icon-wrapper">
+            <el-icon><Document /></el-icon>
+          </div>
           <h3>多格式支持</h3>
           <p>支持 Word、PDF、Excel 等多种文档格式</p>
         </div>
         <div class="feature-card">
-          <el-icon><ChatLineRound /></el-icon>
+          <div class="icon-wrapper">
+            <el-icon><ChatLineRound /></el-icon>
+          </div>
           <h3>多语言翻译</h3>
           <p>支持中英日等多种语言互译</p>
         </div>
         <div class="feature-card">
-          <el-icon><Lock /></el-icon>
+          <div class="icon-wrapper">
+            <el-icon><Lock /></el-icon>
+          </div>
           <h3>安全可靠</h3>
           <p>保护您的文档安全和隐私</p>
         </div>
@@ -86,16 +96,23 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   transition: transform 0.3s;
+  border: 1px solid rgba(64, 158, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
+  border-color: #409EFF;
+  box-shadow: 0 6px 16px rgba(64, 158, 255, 0.1);
 }
 
 .feature-card .el-icon {
   font-size: 40px;
   color: #409EFF;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-card h3 {
@@ -188,5 +205,28 @@
   color: rgba(0, 0, 0, 0.85) !important;
   margin: 0;  /* 移除默认边距 */
   line-height: 1.6;  /* 增加行高提高可读性 */
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: rgba(64, 158, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover .icon-wrapper {
+  transform: scale(1.1);
+  background: rgba(64, 158, 255, 0.2);
+}
+
+.icon-wrapper .el-icon {
+  font-size: 36px;
+  color: #409EFF;
+  line-height: 1;
 }
 </style>

@@ -12,6 +12,9 @@
             <router-link to="/" class="menu-item" active-class="is-active">
               <span class="menu-text">首页</span>
             </router-link>
+            <router-link to="/text" class="menu-item" active-class="is-active">
+              <span class="menu-text">文字翻译</span>
+            </router-link>
             <router-link to="/document" class="menu-item" active-class="is-active">
               <span class="menu-text">文档翻译</span>
             </router-link>
